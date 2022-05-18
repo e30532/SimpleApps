@@ -2,7 +2,7 @@
     <wb-module deploy-name="SimpleJDBC">
         <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
         <dependent-module archiveName="SimpleJDBCWeb.war" deploy-path="/" handle="module:/resource/SimpleJDBCWeb/SimpleJDBCWeb">
-            <dependent-object>Module_1652846699679</dependent-object>
+            <dependent-object>Module_1652847441610</dependent-object>
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
