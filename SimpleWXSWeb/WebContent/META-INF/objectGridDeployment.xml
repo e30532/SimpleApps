@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploymentPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ibm.com/ws/objectgrid/deploymentPolicy ../deploymentPolicy.xsd" xmlns="http://ibm.com/ws/objectgrid/deploymentPolicy">
+    <objectgridDeployment objectgridName="Grid01">
+        <mapSet name="MapSet01" numberOfPartitions="5" minSyncReplicas="0" maxSyncReplicas="0" maxAsyncReplicas="1" developmentMode="false" placementStrategy="FIXED_PARTITIONS">
+            <map ref="Map01"/>
+        </mapSet>
+    </objectgridDeployment>
+	<objectgridDeployment objectgridName="session">
+		<mapSet name="sessionMapSet" numberOfPartitions="5" minSyncReplicas="0" maxSyncReplicas="0" 
+				maxAsyncReplicas="1" developmentMode="false" placementStrategy="PER_CONTAINER">
+             <map ref="objectgridSessionMetadata"/>
+             <map ref="objectgridSessionAttribute.*"/>
+             <map ref="objectgridSessionTTL.*"/>
+    </mapSet>
+   </objectgridDeployment>
+</deploymentPolicy>
