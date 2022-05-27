@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jaxws.simple/" version="1.0" xmlns:tns="http://jaxws.simple/">
+
+  <xs:element name="say" type="tns:say"/>
+
+  <xs:element name="sayResponse" type="tns:sayResponse"/>
+
+  <xs:complexType name="say">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

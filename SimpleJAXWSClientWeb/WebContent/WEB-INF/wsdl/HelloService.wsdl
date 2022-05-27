@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="http://schemas.xmlsoap.org/wsdl/" name="HelloService" targetNamespace="http://jaxws.simple/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://jaxws.simple/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://jaxws.simple/" schemaLocation="HelloService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="sayResponse">
+    <part element="tns:sayResponse" name="parameters">
+    </part>
+  </message>
+  <message name="say">
+    <part element="tns:say" name="parameters">
+    </part>
+  </message>
+  <portType name="Hello">
+    <operation name="say">
+      <input message="tns:say" wsam:Action="http://jaxws.simple/Hello/sayRequest">
+    </input>
+      <output message="tns:sayResponse" wsam:Action="http://jaxws.simple/Hello/sayResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="HelloPortBinding" type="tns:Hello">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="say">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="HelloService">
+    <port binding="tns:HelloPortBinding" name="HelloPort">
+      <soap:address location="http://localhost:9080/SimpleJAXWSWeb/HelloService"/>
+    </port>
+  </service>
+</definitions>
