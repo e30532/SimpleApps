@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+	<display-name>SimpleSecure</display-name>
+	<module id="Module_1653974126996">
+		<web>
+			<web-uri>SimpleSecureWeb.war</web-uri>
+			<context-root>SimpleSecureWeb</context-root>
+		</web>
+	</module>
+	<security-role>
+		<role-name>MyRole</role-name>
+	</security-role>
+</application>
