@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SimpleExecutorService">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="SimpleExecutorServiceWeb.war" deploy-path="/" handle="module:/resource/SimpleExecutorServiceWeb/SimpleExecutorServiceWeb">
+            <dependent-object>Module_1653960001838</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

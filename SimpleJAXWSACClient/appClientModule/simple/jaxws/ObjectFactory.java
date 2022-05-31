@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Say_QNAME = new QName("http://jaxws.simple/", "say");
     private final static QName _SayResponse_QNAME = new QName("http://jaxws.simple/", "sayResponse");
+    private final static QName _Say_QNAME = new QName("http://jaxws.simple/", "say");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: simple.jaxws
@@ -51,21 +51,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Say }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://jaxws.simple/", name = "say")
-    public JAXBElement<Say> createSay(Say value) {
-        return new JAXBElement<Say>(_Say_QNAME, Say.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SayResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://jaxws.simple/", name = "sayResponse")
     public JAXBElement<SayResponse> createSayResponse(SayResponse value) {
         return new JAXBElement<SayResponse>(_SayResponse_QNAME, SayResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Say }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://jaxws.simple/", name = "say")
+    public JAXBElement<Say> createSay(Say value) {
+        return new JAXBElement<Say>(_Say_QNAME, Say.class, null, value);
     }
 
 }
