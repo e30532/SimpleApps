@@ -27,7 +27,10 @@ public class SimpleServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at:  ").append(request.getContextPath());
+		System.out.println("simple.mvc.SimpleServlet.doGet() >");
+		System.out.println("input: " + request.getParameter("message"));
+        getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
+        System.out.println("simple.mvc.SimpleServlet.doGet() <");
 	}
 
 	/**
@@ -35,6 +38,10 @@ public class SimpleServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("simple.mvc.SimpleServlet.doPost() > ");
+        System.out.println("input: " + request.getParameter("message"));
+        getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
+        System.out.println("simple.mvc.SimpleServlet.doPost() < ");
 		doGet(request, response);
 	}
 
