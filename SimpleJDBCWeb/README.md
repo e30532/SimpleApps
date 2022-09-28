@@ -33,7 +33,7 @@ http://xxxx:9080/SimpleJDBCWeb
     <library id="DB2JCC4Lib">
         <fileset dir="/opt/ibm/db2/V11.5/java" includes="db2jcc4.jar"/>
     </library>
-    <dataSource id="DefaultDataSource" jndiName="jdbc/SAMPLE">
+    <dataSource id="DefaultDataSource" jndiName="jdbc/SimpleDS">
         <connectionManager agedTimeout="0" connectionTimeout="10s" maxPoolSize="20" minPoolSize="5"/>
         <jdbcDriver libraryRef="DB2JCC4Lib"/>
         <properties.db2.jcc databaseName="WASDB" password="*****" portNumber="50000" serverName="localhost" user="db2inst1"/>
