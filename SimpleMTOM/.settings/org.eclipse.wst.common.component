@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SimpleMTOM">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="SimpleMTOMWeb.war" deploy-path="/" handle="module:/resource/SimpleMTOMWeb/SimpleMTOMWeb">
+            <dependent-object>Module_1664441041480</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

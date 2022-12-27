@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mtom.simple/" version="1.0" xmlns:tns="http://mtom.simple/">
+
+  <xs:element name="fileUpload" type="tns:fileUpload"/>
+
+  <xs:element name="fileUploadResponse" type="tns:fileUploadResponse"/>
+
+  <xs:complexType name="fileUpload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fileUploadResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

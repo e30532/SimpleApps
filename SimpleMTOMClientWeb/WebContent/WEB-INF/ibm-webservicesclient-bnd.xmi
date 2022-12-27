@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1664441588875">
+  <serviceRefs xmi:id="ServiceRef_1664441588878" serviceRefLink="service/HelloService">
+    <portQnameBindings xmi:id="PortQnameBinding_1664441588878" portQnameNamespaceLink="http://mtom.simple/" portQnameLocalNameLink="HelloPort" overriddenEndpointURI="http://localhost:9080/SimpleMTOMWeb/HelloService"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>
