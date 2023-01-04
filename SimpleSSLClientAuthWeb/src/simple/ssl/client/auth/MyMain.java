@@ -21,7 +21,7 @@ public class MyMain {
 			HttpClient httpclient = new DefaultHttpClient();
 
 			KeyStore ks = KeyStore.getInstance("PKCS12");
-			FileInputStream tsf = new FileInputStream("/tmp/key.p12");
+			FileInputStream tsf = new FileInputStream("/tmp/tmp/key.p12");
 			ks.load(tsf, "WebAS".toCharArray());
 			TrustManagerFactory tmf = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
 			tmf.init(ks);

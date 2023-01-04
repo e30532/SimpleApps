@@ -31,6 +31,7 @@ public class SimpleServlet extends HttpServlet {
 		X509Certificate[] certs = (X509Certificate[]) request.getAttribute("javax.servlet.request.X509Certificate");
 		System.out.println(certs[0].getIssuerDN().getName());
 		System.out.println(certs[0].getSubjectDN().getName());
+		System.out.println(request.getHeader("X-SSL-certificate"));
 	}
 
 	/**
