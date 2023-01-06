@@ -49,6 +49,7 @@ public class SimpleServlet extends HttpServlet {
 		    } 
 		}); 
 //		session.setDebug(false); 
+
 		try{ 
 		    MimeMessage msg = new MimeMessage(session); 
 		    msg.setFrom(new InternetAddress("ymdyskl2@gmail.com")); 
