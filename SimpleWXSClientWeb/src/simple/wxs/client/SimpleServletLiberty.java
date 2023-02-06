@@ -71,10 +71,10 @@ public class SimpleServletLiberty extends HttpServlet {
 
 		    //If security is not enabled,  ElasticCacheClientConnectionHelper can be used.
 		    //https://www.ibm.com/support/knowledgecenter/en/SSTVLU_8.6.1/com.ibm.websphere.extremescale.doc/txsjavaclientliberty.html
-			aObjGrid = ElasticCacheClientConnectionHelper.connect("Grid01");
+			aObjGrid = ElasticCacheClientConnectionHelper.connect("Grid1");
 		    
 		    Session session = aObjGrid.getSession();
-			ObjectMap om = session.getMap("Map01");
+			ObjectMap om = session.getMap("Map1");
 			
 			if(request.getParameter("operation").equals("add")) {
 				Integer key = new Integer(Integer.parseInt((String)request.getParameter("id")));
@@ -86,7 +86,6 @@ public class SimpleServletLiberty extends HttpServlet {
 				Integer key = new Integer(Integer.parseInt((String)request.getParameter("id")));
 				session.begin();
 				Object obj = om.get(key);
-				Thread.sleep(1000*700);
 				session.commit();
 				System.out.println("key = " + key.toString() + ", value = " + obj.toString() + " was retrieved!" );				
 			}
