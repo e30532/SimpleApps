@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache>
+	<cache-entry>
+		<class>servlet</class>
+		<name>/CacheServlet</name>
+		<cache-id>
+			<component id="id" type="parameter">
+				<required>true</required>
+			</component>
+			<timeout>30</timeout>
+		</cache-id>
+	</cache-entry>
+
+	<cache-entry>
+		<class>command</class>
+		<sharing-policy>not-shared</sharing-policy>
+		<name>MyCommand</name>
+		<name>simple.dynacache.MyCommand.class</name>
+		<cache-id>
+			<component type="method" id="getSymbol">
+				<required>true</required>
+			</component>
+			<priority>3</priority>
+			<timeout>30</timeout>
+		</cache-id>
+	</cache-entry>
+</cache>
