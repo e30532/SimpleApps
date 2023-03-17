@@ -44,3 +44,5 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # This default user is created in the openshift/base-centos7 image
 USER 1001
+
+RUN configure.sh
