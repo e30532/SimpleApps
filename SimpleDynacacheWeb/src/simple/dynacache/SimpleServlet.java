@@ -35,14 +35,14 @@ public class SimpleServlet extends HttpServlet {
 		try {
 			ic = new InitialContext();
 			DistributedMap dm = (DistributedMap)ic.lookup("services/cache/distributedmap");
-			int i = 0;
-			if(dm.get(id)!=null) {
-				i = (Integer)dm.get(id);
-				System.out.println("id: " + id + ", value=" + i);
-			} else {
-				System.out.println("id: " + id + ", value=" + i);				
-			}
-			dm.put(id, ++i);
+//			int i = 0;
+//			if(dm.get(id)!=null) {
+//				i = (Integer)dm.get(id);
+//				System.out.println("id: " + id + ", value=" + i);
+//			} else {
+//				System.out.println("id: " + id + ", value=" + i);				
+//			}
+			dm.put(id, new byte[1000*1000]);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

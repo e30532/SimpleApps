@@ -7,10 +7,30 @@
 			<component id="id" type="parameter">
 				<required>true</required>
 			</component>
-			<timeout>30</timeout>
+			<component id="action" type="parameter">
+				<value>view</value>
+				<required>true</required>
+			</component>
+			<component id="category" type="parameter">
+				<required>true</required>
+			</component>
+			<timeout>0</timeout>
 		</cache-id>
+		<dependency-id>category
+			<component id="category" type="parameter">
+				<required>true</required>
+			</component>
+		</dependency-id>
+		<invalidation>category
+			<component id="action" type="parameter" ignore-value="true">
+				<value>update</value>
+				<required>true</required>
+			</component>
+			<component id="category" type="parameter">
+				<required>true</required>
+     		</component>
+		</invalidation>
 	</cache-entry>
-
 	<cache-entry>
 		<class>command</class>
 		<sharing-policy>not-shared</sharing-policy>

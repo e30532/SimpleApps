@@ -26,15 +26,17 @@ public class CacheServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("sleep>");
-		try {
-			Thread.sleep(1000*10);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("sleep<");
-		response.getWriter().append("Served at: ").append(request.getContextPath()).append(". " + System.currentTimeMillis());
+//		System.out.println("sleep>");
+//		try {
+//			Thread.sleep(1000*10);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		System.out.println("sleep<");
+		byte[] b = new byte[1000];
+		java.util.Arrays.fill(b, (byte)1);
+		response.getWriter().append("Served at: ").append(request.getContextPath()).append(". " + System.currentTimeMillis()).append(new String(b));
 	}
 
 	/**
