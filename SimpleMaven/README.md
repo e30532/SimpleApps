@@ -43,7 +43,6 @@ Now you can deploy the ear on liberty (I used 23.0.0.4.)
     <!-- Enable features -->
     <featureManager>
     <feature>jakartaee-10.0</feature>
-    <feature>servlet-6.0</feature>
     </featureManager>
 
     <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
