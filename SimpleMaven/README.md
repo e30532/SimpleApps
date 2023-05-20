@@ -1,6 +1,6 @@
 
 1. Download the maven project from here.  
-https://ibm.box.com/s/i7s918ydbfw6kddugbr4bjgsxl1xusnb
+https://ibm.box.com/s/osre1lka2m6xaji0xl4f3x30oq7wl8gs
 
 2. extract the zip. 
 ```
