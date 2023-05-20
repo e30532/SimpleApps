@@ -1,3 +1,17 @@
+# Background
+We can't create Jakarta EE 9 or later application by using eclipse(WTP).   
+https://wiki.eclipse.org/Category:Eclipse_Web_Tools_Platform_Project  
+https://wiki.eclipse.org/WTP_2023-05-18  
+```
+New versions of key facets have yet to be added for Jakarta EE 9 and now Jakarta EE 10 and 10.1. A significant amount of additions have been made for EE9 and 10 support, but more are still needed. 
+```
+<img width="608" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/e8bf037b-12b5-478d-b389-21003cbbfdd4">.  
+
+So this document describes how to create an EAR application by using Maven so that we can specify the ear version in pom.xml.   
+
+
+
+
 
 1. Download the maven project from here.  
 https://ibm.box.com/s/osre1lka2m6xaji0xl4f3x30oq7wl8gs
