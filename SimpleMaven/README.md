@@ -10,8 +10,44 @@ New versions of key facets have yet to be added for Jakarta EE 9 and now Jakarta
 So this document describes how to create an EAR application by using Maven so that we can specify the ear version in pom.xml.   
 
 
+# How to create a typical ear application by using maven.
+1. create an application as we usually do.   
+<img width="161" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/1c19fd50-89ce-4e55-aab7-0b16055d2e67">.  
+
+2. convert each modules into maven project.   
+<img width="632" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/e0e49100-e100-4e70-8451-f8f6a13dc480">.  
+<img width="174" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/a1d3335c-3407-4f62-9196-8b6b541f1677">.  
+
+3. create a parent maven project.   
+<img width="611" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/1630fc10-9409-4648-8b5e-87ab8c2903ba">.  
+<img width="697" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/26edd26c-e435-4b8f-b805-7f667fe225eb">.  
+<img width="704" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/356878bd-d393-460e-9a0c-e1b50e5f0fed">.  
+
+4. add the modules to the parent project.   
+<img width="1009" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/03d9c42b-b264-486f-9a63-7a2e24ef90a2">
+
+5. add war and ejb to ear pom.xml as dependencies.   
+<img width="535" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/b4e578ac-eb4d-4c1c-8f7a-e82c62fe4cbf">.  
+<img width="618" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/b7123c0d-9ead-4d6b-8ebf-c52106a4d5b7">.  
+
+6. if the war module doen't contain web.xml, set "failOnMissingWebXml" to false.    
+<img width="555" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/50e45ce2-6db3-42cb-a8c3-d140117e7738">.  
+
+7. By running "Maven install", you can build the ear including the war and the ejb.   
+<img width="1047" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/3d52583b-edca-449e-ba38-be8a0b954679">.  
+
+8. You can specify the ear version in the ear pom.xml. The following example is setting the ear version to Jakarta EE 10. Note: By default, application.xml is not included in the ear file. So I set generateApplicationXml to true. And I also update the maven plugin ear version which support Jakarta EE 10.   
+<img width="556" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/42572355-ae1a-4014-a91d-608194a098d6">.  
+
+You will see this message, but you can ignore this.   
+<img width="928" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/aa1e19c1-2552-4fc5-b922-fd97d0ca1e1c">.  
+
+<img width="1044" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/2b48d5bc-f619-472c-b026-18e662e5bbb2">.  
 
 
+
+# Sample
+The following maven project contains two maven modules (ear and war). So by just importing this project, you can customize this template a bit to meet your requirement.   
 
 1. Download the maven project from here.  
 https://ibm.box.com/s/osre1lka2m6xaji0xl4f3x30oq7wl8gs
