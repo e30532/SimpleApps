@@ -18,7 +18,7 @@ public class MyClient {
 		operation = args[0];
 
 		ObjectGridManager ogm = ObjectGridManagerFactory.getObjectGridManager();
-		String catalogServiceEndpoints = "10.21.34.38:4809,10.21.34.38:4810";
+		String catalogServiceEndpoints = args[3];
 		try {
 			ClientClusterContext ccc = ogm.connect(catalogServiceEndpoints, (ClientSecurityConfiguration) null, (URL) null);
 			ObjectGrid og = ogm.getObjectGrid(ccc, "Grid01");
