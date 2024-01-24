@@ -48,21 +48,14 @@ public class SimpleServlet extends HttpServlet {
                 InitialContext initCtx = new InitialContext();
                 ds = (DataSource) initCtx.lookup("java:comp/env/jdbc/SimpleDS");
                 con = ds.getConnection();
-//                stmt = con.createStatement();
+                stmt = con.createStatement();
                 if(operation.equals("select")) {
-//                        rs = stmt.executeQuery(sql);
-//                        while(rs.next()){
-//                                int id = rs.getInt("ID");
-//                                String name = rs.getString("NAME");
-//                                System.out.println("ID: " + id + ". Name: " + name);
-//                        }
-                        String sql2 = "INSERT INTO AAA VALUES (?,?)";
-                        presmt = con.prepareStatement(sql2);
-                        presmt.setQueryTimeout(333);
-                        presmt.setInt(1, 1);
-                        FileInputStream oFIS = new FileInputStream("/root/core.2271781.zip");
-                        presmt.setBinaryStream(2, oFIS, oFIS.available());
-                        presmt.executeUpdate();
+                        rs = stmt.executeQuery(sql);
+                        while(rs.next()){
+                                int id = rs.getInt("ID");
+                                String name = rs.getString("NAME");
+                                System.out.println("ID: " + id + ". Name: " + name);
+                        }
                 }else if(operation.equals("update")) {
                         int i = stmt.executeUpdate(sql);
                         System.out.println(i + " record was updated.");
