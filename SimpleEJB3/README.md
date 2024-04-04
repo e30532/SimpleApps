@@ -16,10 +16,7 @@
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/113c0366-6b4c-47dc-bd6b-dce9950ba873"><br>    
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/00e3e8db-c040-47dd-a7e5-77be4e5fa6fe"><br>    
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/a9ae1ed7-4c87-4400-935b-9012677a1d74"><br>    
-<img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/6223cd70-a23d-4925-821d-08983e6e89ca"><br>    
----
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/c672b376-7b77-452c-b1c8-ab0d7b57be39"><br>    
----
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/4d8e63ef-6a09-4cdf-b783-eacef50410f6"><br>    
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/72623ec6-47b3-4e37-833f-82f8fca0df74"><br>    
 <img width="300" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/897b16a5-6a66-4655-adf8-6b7d9d50fd39"><br>    
