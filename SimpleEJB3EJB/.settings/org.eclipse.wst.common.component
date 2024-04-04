@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SimpleEJB3EJB">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/.apt_generated"/>
+        <property name="java-output-path" value="/SimpleEJB3EJB/build/classes"/>
+        <property name="ClientProject" value="SimpleEJB3EJBClient"/>
+        <property name="ClientJARURI" value="SimpleEJB3EJBClient.jar"/>
+    </wb-module>
+</project-modules>
