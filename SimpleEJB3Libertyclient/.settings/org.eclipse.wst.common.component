@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SimpleEJB3Libertyclient">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="SimpleEJB3LibertyclientClient.jar" deploy-path="/" handle="module:/resource/SimpleEJB3LibertyclientClient/SimpleEJB3LibertyclientClient">
+            <dependent-object>Module_1712200945107</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SimpleEJB3EJBClient.jar" deploy-path="/lib" handle="module:/resource/SimpleEJB3EJBClient/SimpleEJB3EJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
