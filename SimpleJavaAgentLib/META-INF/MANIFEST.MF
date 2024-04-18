@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Agent-Class: simple.java.agent.lib.MyAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Main-Class: simple.java.agent.lib.MyAgent
+Premain-Class: simple.java.agent.lib.MyAgent
