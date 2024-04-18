@@ -2,13 +2,13 @@ This document explains how to develop a simple java agent and how it looks like 
 
 # How to run
 1. specify the target PID in MyMain.java
-   <img width="563" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/e2e727aa-4119-43d8-bb2b-3e365091f4d7">
+   <img width="563" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/e2e727aa-4119-43d8-bb2b-3e365091f4d7"><br>
 
 2. export the library jar
-<img width="684" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/28fedffb-4edd-46c0-868d-42d0dbdc1ac6">
-<img width="595" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/600b4fca-cde2-4076-a2db-f8c557aca4f5">
-It's necessary to use the existing MANIFEST.MF because it specifies which class will be executed as an agent class.  
-<img width="601" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/c39846db-8a57-4411-902e-e8bfb1ac917a">
+<img width="684" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/28fedffb-4edd-46c0-868d-42d0dbdc1ac6"><br>
+<img width="595" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/600b4fca-cde2-4076-a2db-f8c557aca4f5"><br>
+It's necessary to use the existing MANIFEST.MF because it specifies which class will be executed as an agent class.  <br>
+<img width="601" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/c39846db-8a57-4411-902e-e8bfb1ac917a"><br>
 
 3. start a target server
 ```
@@ -23,7 +23,9 @@ ADMU3200I: Server launched. Waiting for initialization status.
 ADMU3000I: Server dmgr open for e-business; process id is 3706094
 ```
 
-As you see below, we can execute an arbitary code in the agent libary on the target process. 
+As you see below, we can execute an arbitary code in the agent libary on the target process. <br>
+<img width="921" alt="image" src="https://github.com/e30532/SimpleApps/assets/22098113/a27019ea-4c78-4730-bc38-763b7bedb3d5">
+
 ```
 [root@c81981v1 bin]# tail -n 1 -f ../logs/dmgr/SystemOut.log
 [4/17/24 19:08:54:498 PDT] 0000007d HAManagedItem I   HAMI0024I: The VMPubController_Default Controller is active on c81981v1Cell01\c81981v1CellManager01\dmgr
