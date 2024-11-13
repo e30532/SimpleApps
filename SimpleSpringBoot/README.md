@@ -1,3 +1,12 @@
+
+# Summary
+1. SystemOut logging stop issue can occur if a customer is still using an older Spring version (v1.x.x). It was identified as a Spring defect and was resolved in version 2.   
+2. you can ask the customer's application developer to see if the application set the root logger level to OFF.   
+3. as a workaround, you can rename jul-to-slf4j-*.*.*.jar   
+4. if the application's logging setting is externalized like application.properties or logback-spring.xml, we may update the configuraion file of the expanded binary directly. 
+
+
+   
 # 1. background
 Working as a WebSphere technical support engineer, I sometimes see that WebSphere stops writing to SystemOut.log while a Spring application is starting. In short, this is described in https://www.ibm.com/support/pages/server-logging-ends-abruptly-when-using-slf4j-application  In this document, I'd like to add a bit more for better understanding. 
 
