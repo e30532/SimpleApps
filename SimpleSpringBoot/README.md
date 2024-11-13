@@ -274,16 +274,19 @@ If the application contains jul-to-slf4j-*.*.*.jar, renaming the jar file will b
 ```
 
 The same issue had been reported acorss several JavaEE runtimes and the spring project has fixed this as a defect, which fixed code is available from v2.   
+```
 Slf4JLoggingSystem removes JUL root handlers via SLF4JBridgeHandler #8933   
 https://github.com/spring-projects/spring-boot/issues/8933   
+```
 Therefore, if the customer can migrate their spring boot v1 app to v2, this can be another solution. However, as we saw above, the customer's application might need to be updated.   
-Note: v1 reached EOL back in 2019 (https://spring.io/blog/2018/07/30/spring-boot-1-x-eol-aug-1st-2019)
+Note: v1 reached EOL back in 2019 (https://spring.io/blog/2018/07/30/spring-boot-1-x-eol-aug-1st-2019)  
 
 
 And if the application's logging setting is externalized like application.properties or logback-spring.xml, we may update the configuraion file of the expanded binary directly.   
-
+```
 [root@c89289v1 classes]# pwd
 /opt/IBM/WebSphere/AppServer90ND/profiles/AppSrv01/installedApps/c89289v1Node01Cell/demo-0_0_1-SNAPSHOT_war.ear/demo-0.0.1-SNAPSHOT.war/WEB-INF/classes
 [root@c89289v1 classes]# cat application.properties 
 logging.level.root=INFO
 server.port=8080
+```
