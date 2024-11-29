@@ -4,5 +4,8 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
  		<jta-data-source>jdbc/SimpleDS</jta-data-source>
 		<class>legacy.jpa.Emp2</class>
+		<properties>
+			<property name="eclipselink.weaving" value="false"/>
+	    </properties>
 	</persistence-unit>	
 </persistence>
