@@ -1,8 +1,8 @@
-This is a simple steps to build a simple legacy spring application with JPA.   
+This is a simple steps to build a simple legacy spring application with JPA that uses own eclipselink implementation.      
 
 
 # application build
-update pom.xml
+update pom.xml   
 <img width="712" alt="image" src="https://github.com/user-attachments/assets/5d553691-eb5b-4fce-a258-eb678de41059">   
 <img width="605" alt="image" src="https://github.com/user-attachments/assets/b828d417-459a-491f-842d-48c4b3fcce77">   
 run maven install   
