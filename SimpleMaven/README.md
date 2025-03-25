@@ -1,10 +1,10 @@
-1. install eclipse 2025-03.
+1. install eclipse 2025-03. (do not install WDT since it could caause a conflict)
 2. create TestEAR + TestEARWeb modules
 3. convert the modules into Maven projects
 4. create Test Maven project.
 
-<img width="968" alt="image" src="https://github.com/user-attachments/assets/277e915e-ffd0-4a19-a06a-09b3a9aae630" />
-<img width="974" alt="image" src="https://github.com/user-attachments/assets/634b3a0f-0b32-498a-ab8f-eb43888ef331" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/277e915e-ffd0-4a19-a06a-09b3a9aae630" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/634b3a0f-0b32-498a-ab8f-eb43888ef331" />
 
 Test/pom.xml
 ```
@@ -108,6 +108,18 @@ TestEARWeb/pom.xml
   	<relativePath>../Test</relativePath>
   </parent>
 </project>
+```
+
+```
+[root@c89289v1 bin]# cd /opt/IBM/wlp25.0.0.1/wlp/bin/
+[root@c89289v1 bin]# cp /root/eclipse-workspace202503/TestEAR/target/TestEAR-0.0.1-SNAPSHOT.ear ../usr/servers/test/dropins/
+cp: overwrite '../usr/servers/test/dropins/TestEAR-0.0.1-SNAPSHOT.ear'? y
+[root@c89289v1 bin]# ./server start test
+
+Starting server test.
+Server test started with process ID 2265357.
+[root@c89289v1 bin]# curl http://localhost:9080/TestEARWeb-0.0.1-SNAPSHOT/SimpleServlet
+[root@c89289v1 bin]# 
 ```
 
 
