@@ -1,3 +1,116 @@
+1. install eclipse 2025-03.
+2. create TestEAR + TestEARWeb modules
+3. convert the modules into Maven projects
+4. create Test Maven project.
+
+<img width="968" alt="image" src="https://github.com/user-attachments/assets/277e915e-ffd0-4a19-a06a-09b3a9aae630" />
+<img width="974" alt="image" src="https://github.com/user-attachments/assets/634b3a0f-0b32-498a-ab8f-eb43888ef331" />
+
+Test/pom.xml
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Test</groupId>
+  <artifactId>Test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>../TestEAR</module>
+  	<module>../TestEARWeb</module>
+  </modules>
+</project>
+```
+
+TestEAR/pom.xml
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>TestEAR</groupId>
+  <artifactId>TestEAR</artifactId>
+  <packaging>ear</packaging>
+  <dependencies>
+  	<dependency>
+  	  <groupId>TestEARWeb</groupId>
+	  <artifactId>TestEARWeb</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+	  <type>war</type>
+  	</dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <earSourceDirectory>EarContent</earSourceDirectory>
+          <generateApplicationXml>false</generateApplicationXml>
+          <version>10</version>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <modules>
+          	<webModule>
+        	  <groupId>TestEARWeb</groupId>
+			  <artifactId>TestEARWeb</artifactId>
+			  <contextRoot>/TestEARWeb</contextRoot>
+			  <uri>/TestEARWeb-0.0.1-SNAPSHOT.war</uri>
+          	</webModule>
+          </modules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <parent>
+  	<groupId>Test</groupId>
+  	<artifactId>Test</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<relativePath>../Test</relativePath>
+  </parent>
+</project>
+```
+
+TestEARWeb/pom.xml
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>TestEARWeb</groupId>
+  <artifactId>TestEARWeb</artifactId>
+  <packaging>war</packaging>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <version>10.0.0</version>
+    <scope>provided</scope>
+</dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+              <configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+      </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <parent>
+  	<groupId>Test</groupId>
+  	<artifactId>Test</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<relativePath>../Test</relativePath>
+  </parent>
+</project>
+```
+
+
 # Background
 We can't create Jakarta EE 9 or later application by using eclipse(WTP).   
 https://wiki.eclipse.org/Category:Eclipse_Web_Tools_Platform_Project  
