@@ -1,6 +1,11 @@
 
 
 <img width="889" alt="image" src="https://github.com/user-attachments/assets/82504dde-9256-4d20-8092-fc83454b8b6b" />
+
+        <resourceProperties xmi:id="J2EEResourceProperty_1746081163918" name="mail.smtp.auth" type="java.lang.String" value="true" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1746081190199" name="mail.smtp.starttls.enable" type="java.lang.String" value="true" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1746083011713" name="mail.smtp.port" type="java.lang.String" value="587" required="false"/>
+	
 <img width="838" alt="image" src="https://github.com/user-attachments/assets/dd257ad6-f65d-4303-a3e6-167f8cbfb027" />
 <img width="484" alt="image" src="https://github.com/user-attachments/assets/361bf459-bd5a-4e1f-8d5b-f714cc5b1366" />
 
