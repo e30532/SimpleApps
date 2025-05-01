@@ -72,3 +72,52 @@ public class SimpleServlet extends HttpServlet {
 
 }
 ```
+
+
+
+[root@c89289v1 bin]# echo "" |openssl s_client -connect smtp.gmail.com:465 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'  > /tmp/tmp.crt
+depth=2 C = US, O = Google Trust Services LLC, CN = GTS Root R1
+verify return:1
+depth=1 C = US, O = Google Trust Services, CN = WR2
+verify return:1
+depth=0 CN = smtp.gmail.com
+verify return:1
+DONE
+[root@c89289v1 bin]# /opt/IBM/HTTPServer90/bin/gskcapicmd -cert -add -db /opt/IBM/wlp24.0.0.5/wlp/usr/servers/defaultServer/resources/security/key.p12 -pw PassW0rd -type pkcs12 -label gmail -file /tmp/tmp.crt
+
+```
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>localConnector-1.0</feature>
+    	<feature>javaee-7.0</feature>
+	</featureManager>
+    
+   
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <applicationMonitor updateTrigger="mbean"/>
+    <logging maxFileSize="100" maxFiles="10" traceFileName="trace.log" traceFormat="BASIC" traceSpecification="*=info:GenericBNF=all:HTTPChannel=all:HTTPDispatcher=all:SSLChannel=all:TCPChannel=all:com.ibm.websphere.ssl=all:com.ibm.ws.ssl.*=all:com.ibm.ws.webcontainer*=all:com.ibm.wsspi.ssl.*=all:com.ibm.wsspi.webcontainer*=all"/>
+    <keyStore password="PassW0rd"/>
+
+    <basicRegistry>
+    	<user password="admin" name="admin"></user>
+    </basicRegistry>
+    <application location="/root/SimpleApps/F.ear"/>
+    
+    <mailSession user="ymdyskl2@gmail.com" jndiName="mail/CNMailSession"
+    	from="ymdyskl2@gmail.com" description="CNMailSession"
+    	password="**********" host="smtp.gmail.com"
+    	mailSessionID="CNMailSession">
+    	<property name="mail.smtp.auth" value="true"></property>
+    	<property name="mail.smtp.starttls.enable" value="true"></property>
+    	<property name="mail.smtp.port" value="587"></property>
+    </mailSession>
+</server>
+```
+
