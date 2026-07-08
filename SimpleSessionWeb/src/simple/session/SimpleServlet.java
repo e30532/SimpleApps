@@ -27,9 +27,6 @@ public class SimpleServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession(false);
-		System.out.println(session);
-/**
 		HttpSession session = request.getSession(true);
 		if (session.getAttribute("count")!=null) {
 			
@@ -40,7 +37,6 @@ public class SimpleServlet extends HttpServlet {
 			System.out.println("first request. count: 0");
 			session.setAttribute("count", 1);
 		}
-**/		
 	}
 
 	/**
