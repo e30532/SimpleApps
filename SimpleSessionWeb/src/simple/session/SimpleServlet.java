@@ -37,6 +37,7 @@ public class SimpleServlet extends HttpServlet {
 			System.out.println("first request. count: 0");
 			session.setAttribute("count", 1);
 		}
+
 	}
 
 	/**
